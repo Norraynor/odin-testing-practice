@@ -45,4 +45,25 @@ function caesarCipher(str, shift) {
 	return newStr;
 }
 
-module.exports = { sum, capitalize, reverseString, calculator, caesarCipher };
+function analyzeArray(arr) {
+	//average,min,max,length
+	let average = 0;
+	let length = arr.length;
+	let sum = arr.reduce((previousVal, currentVal) => {
+		return previousVal + currentVal;
+	});
+	average = sum / length;
+
+	let min = Math.min(...arr);
+	let max = Math.max(...arr);
+	return { average, length, min, max };
+}
+
+module.exports = {
+	sum,
+	capitalize,
+	reverseString,
+	calculator,
+	caesarCipher,
+	analyzeArray,
+};
